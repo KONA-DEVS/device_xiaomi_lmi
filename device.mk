@@ -45,8 +45,13 @@ PRODUCT_COPY_FILES += \
 # Fingerprint
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:system/etc/permissions/vendor.>
+
 PRODUCT_PACKAGES += \
     lineage.biometrics.fingerprint.inscreen@1.0-service.lmi
+
+# Livedisplay
+PRODUCT_PACKAGES += \
+    lineage.livedisplay@2.0-service-sdm
 
 # Vendor properties
 -include $(LOCAL_PATH)/device_props.mk
