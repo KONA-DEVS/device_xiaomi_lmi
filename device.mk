@@ -376,6 +376,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service.lmi
 
+# RRO
+PRODUCT_ENFORCE_RRO_TARGETS := *
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
