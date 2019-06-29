@@ -5,6 +5,7 @@
 #
 
 DEVICE_PATH := device/xiaomi/lmi
+PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := lmi
