@@ -367,6 +367,20 @@ vendor/lib/hw/vendor.xiaomi.hardware.motor@1.0-impl.so
 vendor/lib/libmivendor_module_motor.so
 vendor/lib/mi.motor.daemon.so
 
+# Camera (popup sound effects)
+media/audio/ui/popup_cangmen_down.ogg
+media/audio/ui/popup_cangmen_up.ogg
+media/audio/ui/popup_chilun_down.ogg
+media/audio/ui/popup_chilun_up.ogg
+media/audio/ui/popup_jijia_down.ogg
+media/audio/ui/popup_jijia_up.ogg
+media/audio/ui/popup_mofa_down.ogg
+media/audio/ui/popup_mofa_up.ogg
+media/audio/ui/popup_muqin_down.ogg
+media/audio/ui/popup_muqin_up.ogg
+media/audio/ui/popup_yingyan_down.ogg
+media/audio/ui/popup_yingyan_up.ogg
+
 # Camera-sensors
 vendor/lib/libmmcamera_faceproc.so
 vendor/lib/libmmcamera_faceproc2.so
@@ -1876,3 +1890,4 @@ vendor/lib/libwigig_pciaccess.so
 vendor/lib/libwigig_utils.so
 vendor/lib/libwvkeybox.so
 vendor/lib/qtimutex.so
+
