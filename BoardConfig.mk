@@ -77,6 +77,9 @@ BOARD_RECOVERYIMAGE_PARTITION_SIZE := 134217728
 # Platform
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
 
+# Properties
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
