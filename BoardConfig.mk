@@ -1,4 +1,4 @@
-#
+
 # Copyright (C) 2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -6,6 +6,9 @@
 
 DEVICE_PATH := device/xiaomi/lmi
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
+
+# A/B
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := lmi
