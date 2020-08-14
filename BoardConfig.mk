@@ -1,4 +1,3 @@
-
 # Copyright (C) 2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
@@ -8,6 +7,7 @@ DEVICE_PATH := device/xiaomi/lmi
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # A/B
+PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Assert
@@ -78,3 +78,4 @@ BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/lmi/BoardConfigVendor.mk
+
