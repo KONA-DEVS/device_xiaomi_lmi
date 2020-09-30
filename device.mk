@@ -10,6 +10,10 @@ $(call inherit-product, vendor/xiaomi/lmi/lmi-vendor.mk)
 # Vendor properties
 -include $(LOCAL_PATH)/device_props.mk
 
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay
+
 # Recovery
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc \
