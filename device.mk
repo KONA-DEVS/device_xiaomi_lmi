@@ -8,6 +8,7 @@
 $(call inherit-product, vendor/xiaomi/lmi/lmi-vendor.mk)
 
 PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Audio
 PRODUCT_COPY_FILES += \
