@@ -60,6 +60,7 @@ BOARD_RAMDISK_OFFSET       := 0x01000000
 BOARD_DTB_OFFSET           := 0x01f00000
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_CONFIG := vendor/lineage_lmi_defconfig
+TARGET_KERNEL_CLANG_COMPILE := true
 
 
 # Partitions
