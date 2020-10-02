@@ -379,7 +379,6 @@ vendor/lib/hw/consumerir.default.so
 
 # DPM
 framework/tcmclient.jar
-<<<<<<< HEAD
 system_ext/bin/dpmd
 system_ext/etc/dpm/dpm.conf
 system_ext/etc/init/dpmd.rc
@@ -509,23 +508,6 @@ vendor/etc/qdcm_calib_data_xiaomi_j11_38_08_0a_fhd_panel.xml
 vendor/bin/hw/vendor.qti.esepowermanager@1.1-service
 vendor/etc/init/vendor.qti.esepowermanager@1.1-service.rc
 vendor/lib/hw/vendor.qti.esepowermanager@1.1-impl.so
-=======
-lib/com.qualcomm.qti.dpm.api@1.0.so
-lib/libdpmctmgr.so
-lib/libdpmfdmgr.so
-lib/libdpmframework.so
-lib/libdpmtcm.so
-lib64/com.qualcomm.qti.dpm.api@1.0.so
-lib64/libdpmctmgr.so
-lib64/libdpmfdmgr.so
-lib64/libdpmframework.so
-lib64/libdpmtcm.so
--priv-app/dpmserviceapp/dpmserviceapp.apk
-
-# Display postprocessing
-lib64/libsdm-disp-apis.so
-lib64/vendor.display.color@1.0.so
->>>>>>> 18c5389... raphael: Build LiveDisplay HAL
 
 # FM
 vendor/lib/ftm_fm_lib.so
