@@ -20,7 +20,6 @@
 
 #include <android-base/logging.h>
 #include <fstream>
-#include <cmath>
 #include <thread>
 
 #include <fcntl.h>
