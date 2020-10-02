@@ -63,6 +63,22 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.lmi
 
+# NFC
+PRODUCT_SOONG_NAMESPACES += \
+    vendor/nxp/opensource/sn100x
+PRODUCT_PACKAGES += \
+    com.android.nfc_extras \
+    com.nxp.nfc.nq \
+    NQNfcNci \
+    Tag
+PRODUCT_PACKAGES += \
+    nfc_nci.nqx.default.hw \
+    vendor.nxp.hardware.nfc@1.2-service
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
+    $(LOCAL_PATH)/configs/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
+
 # Vendor properties
 -include $(LOCAL_PATH)/device_props.mk
 
