@@ -38,9 +38,9 @@
 
 #define FOD_UI_PATH "/sys/devices/platform/soc/soc:qcom,dsi-display/fod_ui"
 
-#define FOD_SENSOR_X 445
-#define FOD_SENSOR_Y 1931
-#define FOD_SENSOR_SIZE 190
+#define FOD_SENSOR_X 441
+#define FOD_SENSOR_Y 1808
+#define FOD_SENSOR_SIZE 197
 
 namespace {
 
