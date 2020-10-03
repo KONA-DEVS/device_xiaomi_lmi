@@ -86,9 +86,6 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
-# Product launched with 10.0
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_q.mk)
-
 # roodir
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
