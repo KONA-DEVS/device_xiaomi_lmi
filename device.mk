@@ -5,7 +5,7 @@
 #
 
 # Get non-open-source specific aspects
-$(call inherit-product, vendor/xiaomi/lmi/lmi-vendor.mk)
+#$(call inherit-product, vendor/xiaomi/lmi/lmi-vendor.mk)
 
 # ANT+
 PRODUCT_PACKAGES += \

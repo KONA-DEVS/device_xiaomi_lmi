@@ -7,22 +7,23 @@ DEVICE_PATH := device/xiaomi/lmi
 PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # A/B
-PRODUCT_BUILD_SUPER_PARTITION := false
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+#PRODUCT_BUILD_SUPER_PARTITION := true
+#PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Assert
 TARGET_OTA_ASSERT_DEVICE := lmi
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
 TARGET_CPU_VARIANT_RUNTIME := cortex-a75
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_ARCH_VARIANT := armv8-2a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a75
@@ -69,8 +70,9 @@ BOARD_KERNEL_OFFSET        := 0x00008000
 BOARD_KERNEL_SECOND_OFFSET := 0x00f00000
 BOARD_RAMDISK_OFFSET       := 0x01000000
 BOARD_DTB_OFFSET           := 0x01f00000
+TARGET_KERNEL_SOURCE := kernel/xiaomi/lmi
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_CONFIG := vendor/lineage_lmi_defconfig
+TARGET_KERNEL_CONFIG := lmi_user_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 
 # Partitions
@@ -85,11 +87,41 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
+# Prop file include
+TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+
+# QCOM
+BOARD_USES_QCOM_HARDWARE := true
+TARGET_BOARD_PLATFORM := kona
+
+# Recovery
+BOARD_INCLUDE_RECOVERY_DTBO := true
+BOARD_INCLUDE_RECOVERY_DTBO := false
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/fstab.qcom
+TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
+TARGET_USERIMAGES_USE_F2FS := true
+
+# SELinux
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
+    $(DEVICE_PATH)/sepolicy/private
+
+# Treble
+PRODUCT_FULL_TREBLE_OVERRIDE := true
+PRODUCT_VENDOR_MOVE_ENABLED := true
+BOARD_PROPERTY_OVERRIDES_SPLIT_ENABLED := true
+
 # Verified Boot
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
+# Vendor
+BUILD_WITHOUT_VENDOR := true
+
+# VNDK
+BOARD_VNDK_VERSION := current
+
 # Inherit from the proprietary version
--include vendor/xiaomi/lmi/BoardConfigVendor.mk
+#-include vendor/xiaomi/lmi/BoardConfigVendor.mk
 
