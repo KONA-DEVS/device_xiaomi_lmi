@@ -16,7 +16,7 @@ cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
     name: "android.hardware.light@2.0-service.lmi",
-    vintf_fragments: ["android.hardware.light@2.0-service.lmi.xml"]
+    vintf_fragments: ["android.hardware.light@2.0-service.lmi.xml"],
     init_rc: ["android.hardware.light@2.0-service.lmi.rc"],
     srcs: [
         "service.cpp",
