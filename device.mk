@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
 # Get non-open-source specific aspects
-$(call inherit-product-if-exists, vendor/xiaomi/phoenix/phoenix-vendor.mk)
+$(call inherit-product-if-exists, vendor/xiaomi/lmi/lmi-vendor.mk)
 
 # Include PSU if synced
 $(call inherit-product-if-exists, vendor/google/psu/google-psu.mk)
@@ -77,7 +77,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.xiaomi_phoenix
+    android.hardware.light@2.0-service.xiaomi_lmi
 
 # NFC
 PRODUCT_PACKAGES += \
@@ -112,7 +112,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.phoenix
+    android.hardware.power@1.2-service.lmi
 
 # Telephony
 PRODUCT_PACKAGES += \

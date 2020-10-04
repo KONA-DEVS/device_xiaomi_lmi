@@ -1,25 +1,31 @@
-Copyright (C) 2020 The LineageOS Project
+Copyright (C) 2019-2020 - The LineageOS Project, 2020 cave_diver / ojalbrecht@gmail.com
 
-Device configuration for Xiaomi Redmi K30 / Poco X2
-=========================================
+The Xiaomi Poco F2 Pro / Redmi K30 Pro (codenamed _"lmi"_) are high-end smartphones from Xiaomi.
 
-The Xiaomi Redmi K30 / Poco X2 (codenamed _"phoenix / phoenixin"_) are mid range smartphones from Xiaomi's sub-brand Redmi and Poco, respectively.
-
-Redmi K30 was announced and released in December 2019, while Poco X2 was announced and released in February 2020.
+The devices were announced and released in May 2020.
 
 ## Device specifications
 
-Basic   | Spec Sheet
--------:|:-------------------------
-SoC     | Qualcomm SDM730 Snapdragon 730G
-CPU     | Octa-core (2x2.2 GHz Kryo 470 Gold & 6x1.8 GHz Kryo 470 Silver)
-GPU     | Adreno 618
-Memory  | 6/8 GB RAM
-Shipped Android Version | 10 with MIUI 11
-Storage | 64/128/256 GB
-Battery | Non-removable Li-Po 4500 mAh battery
-Display | 1080 x 2400 pixels, 20:9 ratio, 6.67 inches, IPS LCD (~386 ppi density)
+| Device       | Xiaomi Poco F2 Pro / Redmi K30 Pro              |
+| -----------: | :---------------------------------------------- |
+| SoC          | Qualcomm SM8250 Snapdragon 865                  |
+| CPU          | 1x2.84 GHz Kryo 585 / 3x2.42 GHz Kryo 585 / 4x1.80 GHz Kryo 585                           |
+| GPU          | Adreno 650                                      |
+| Memory       | 6GB RAM (LPDDR4X) / 8GB RAM (LPDDR5)            |
+| Shipped Android version | 10.0 with MIUI 12                    |
+| Storage      | 128GB / 256GB UFS 3.1 flash storage             |
+| Battery      | Non-removable Li-Po 4700 mAh                    |
+| Dimensions   | 163.3 x 75.4 x 8.9 mm (6.43 x 2.97 x 0.35 in)   |
+| Display      | 1080 x 2400 pixels, 20:9 ratio 6.67 inches      |
+| Rear camera 1 | 64 MP, f/1.9, 26mm (wide)                      |
+| Rear camera 2 | 5 MP, f/2.2, 50mm (telephoto macro)            |
+| Rear camera 3 | 13 MP, f/2.4, 123˚ (ultrawide)                 |
+| Rear camera 4 | 2 MP, f/2.4 (depth)                            |
+| Front camera | 20MP, f/2.2 Motorized pop-up, 1080p@30fps       |
 
-## Device picture
+## Device pictures
 
-![Xiaomi Redmi K30](https://xiaomi-mi.com/uploads/CatalogueImage/redmi-k30%20(10)_17912_1577645087.jpg "Xiaomi Redmi K30 in blue")
+
+![Xiaomi Mi 9T/Redmi K20](https://i01.appmifile.com/webfile/globalimg/products/pc/poco-f2-pro/phone1.png "Poco F2 Pro front")
+![Xiaomi Mi 9T/Redmi K20](https://i01.appmifile.com/webfile/globalimg/products/pc/poco-f2-pro/phone2.png "Poco F2 Pro back")
+

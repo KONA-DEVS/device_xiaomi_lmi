@@ -12,7 +12,7 @@
      limitations under the License.
 -->
 <resources>
-    <!-- Redmi K30 / POCO X2 specific settings -->
+    <!-- Redmi K30 Pro / POCO F2 Pro specific settings -->
     <string name="device_specific_settings_title">Device-specific settings</string>
     <string name="device_specific_settings_summary">Cutout and refresh rate configuration</string>
     <string name="device_min_refresh_rate">Minimum Refresh Rate</string>
