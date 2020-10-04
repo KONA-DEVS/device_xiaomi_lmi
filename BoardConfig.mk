@@ -42,8 +42,8 @@ TARGET_NO_BOOTLOADER := true
 TARGET_SURFACEFLINGER_FOD_LIB := //$(DEVICE_PATH):libfod_extension.lmi
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_lmi
-TARGET_RECOVERY_DEVICE_MODULES := libinit_lmi
+#TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_lmi
+#TARGET_RECOVERY_DEVICE_MODULES := libinit_lmi
 
 # HIDL
 DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/hidl/manifest.xml
