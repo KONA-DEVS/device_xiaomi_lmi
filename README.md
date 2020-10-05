@@ -1,4 +1,5 @@
 Copyright (C) 2020 - Carlos Ayrton López Arroyo
+
 Copyright (C) 2020 - KONA-DEVS
 
 Device configuration for Pocophone f2 pro (lmi)
