@@ -119,9 +119,8 @@ BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2147483648
 BOARD_SYSTEMIMAGE_EXTFS_INODE_COUNT := 16384
 BOARD_PRODUCTIMAGE_FILE_SYSTEM_TYPE := ext4
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
-TARGET_COPY_OUT_VENDOR := vendor
+#TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_PRODUCT := product
-BUILD_WITHOUT_VENDOR := true
 BOARD_USES_PRODUCTIMAGE := true
 BOARD_USES_METADATA_PARTITION := true
 
@@ -166,6 +165,9 @@ BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 2
 
+# Vendor
+BUILD_WITHOUT_VENDOR := true
+
 # Inherit from the proprietary version
--include vendor/xiaomi/lmi/BoardConfigVendor.mk
+#-include vendor/xiaomi/lmi/BoardConfigVendor.mk
 
