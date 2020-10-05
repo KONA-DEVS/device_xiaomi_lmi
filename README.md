@@ -1,4 +1,6 @@
-Copyright (C) 2020 - The LineageOS Project
+Copyright (C) 2020 - Carlos Ayrton López Arroyo
+
+Copyright (C) 2020 - KONA-DEVS
 
 Device configuration for Pocophone f2 pro (lmi)
 
@@ -18,4 +20,5 @@ Rear Camera  | 64/13/5/2MP
 Front Camera | 20MP
 
 ## Device picture
-![Poco F2 Pro](https://cdn.cnbj1.fds.api.mi-img.com/product-images/redmik30pro/section5_1.png "Poco F2 Pro")
+![Xiaomi Mi 9T/Redmi K20](https://i01.appmifile.com/webfile/globalimg/products/pc/poco-f2-pro/phone1.png "Poco F2 Pro front")
+![Xiaomi Mi 9T/Redmi K20](https://i01.appmifile.com/webfile/globalimg/products/pc/poco-f2-pro/phone2.png "Poco F2 Pro back")
