@@ -99,7 +99,7 @@ BOARD_SUPER_PARTITION_GROUPS := qti_dynamic_partitions
 BOARD_QTI_DYNAMIC_PARTITIONS_PARTITION_LIST := system product
 
 # verified, needs to be less that SUPER size and enough to provide ample space for the listed partitions
-BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6442450944
+BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := 6438256640 # ( BOARD_SUPER_PARTITION_SIZE - 4MB )
 
 # Do not change the super partition tables
 TARGET_USES_PREBUILT_DYNAMIC_PARTITIONS := true 
