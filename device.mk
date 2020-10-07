@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.1-impl
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothQti
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
@@ -31,6 +35,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    fastbootd
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -66,7 +74,8 @@ PRODUCT_PACKAGES += \
 
 # roodir
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RAMDISK)/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_RECOVERY_ROOT_OUT)/system/etc/recovery.fstab
 
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
@@ -75,3 +84,6 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     hardware/xiaomi
+
+PRODUCT_BUILD_SUPER_PARTITION := false
+PRODUCT_USE_DYNAMIC_PARTITIONS := true

@@ -30,11 +30,11 @@
          Software implementation will be used if config_hardware_auto_brightness_available is not set -->
      <bool name="config_automatic_brightness_available">false</bool>
 
-    <!-- Boolean indicating if current platform supports HFP inband ringing -->
-     <bool name="config_bluetooth_hfp_inband_ringing_support">false</bool>
-
     <!-- Boolean indicating if current platform supports BLE peripheral mode -->
-     <bool name="config_bluetooth_le_peripheral_mode_supported">false</bool>
+    <bool name="config_bluetooth_le_peripheral_mode_supported">true</bool>
+
+    <!-- Boolean indicating if current platform supports HFP inband ringing -->
+    <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
      <bool name="config_camera_sound_forced">false</bool>
@@ -252,8 +252,17 @@
      <integer name="config_autoBrightnessBrighteningLightDebounce">4000</integer>
      <integer name="config_autoBrightnessDarkeningLightDebounce">8000</integer>
 
+    <!-- Idle current for bluetooth controller. 0 by default-->
+    <integer translatable="false" name="config_bluetooth_idle_cur_ma">6</integer>
+
+    <!-- Rx current for bluetooth controller. 0 by default-->
+    <integer translatable="false" name="config_bluetooth_rx_cur_ma">28</integer>
+
+    <!-- Tx current for bluetooth controller. 0 by default-->
+    <integer translatable="false" name="config_bluetooth_tx_cur_ma">36</integer>
+
     <!-- Operating volatage for bluetooth controller. 0 by default-->
-     <integer name="config_bluetooth_operating_voltage_mv">0</integer>
+    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
      <integer name="config_brightness_ramp_rate_fast">180</integer>
