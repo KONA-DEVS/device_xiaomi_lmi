@@ -21,6 +21,10 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
     android.hardware.soundtrigger@2.1-impl
 
+# Bluetooth
+PRODUCT_PACKAGES += \
+    BluetoothQti
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
