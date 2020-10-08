@@ -25,12 +25,21 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/audio/audio_policy_engine_configuration.xml:$(TARGET_COPY_OUT_PRODUCT)/vendor_overlay/$(PRODUCT_TARGET_VNDK_VERSION)/etc/audio_policy_engine_configuration.xml
 
+# Boot
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti.recovery
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     BluetoothQti
 
 # Camera
 TARGET_USES_QTI_CAMERA_DEVICE := true
+
+# Common init scripts
+PRODUCT_PACKAGES += \
+    init.qcom.rc \
+    init.recovery.qcom.rc
 
 # Device-specific settings
 PRODUCT_PACKAGES += \
@@ -49,7 +58,17 @@ PRODUCT_PACKAGES += \
 
 # fastbootd
 PRODUCT_PACKAGES += \
-    fastbootd
+   android.hardware.fastboot@1.0-impl-mock \
+   fastbootd
+
+# Fingerprint
+PRODUCT_COPY_FILES += \
+    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+PRODUCT_PACKAGES += \
+    lineage.biometrics.fingerprint.inscreen@1.0-service.lmi
+
+# GSI
+$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # HIDL
 PRODUCT_PACKAGES += \
@@ -84,15 +103,6 @@ PRODUCT_PACKAGES += \
     SecureElement \
     Tag
 
-# Fingerprint
-PRODUCT_COPY_FILES += \
-    vendor/lineage/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
-PRODUCT_PACKAGES += \
-    lineage.biometrics.fingerprint.inscreen@1.0-service.lmi
-
-# Vendor properties
--include $(LOCAL_PATH)/device_props.mk
-
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
@@ -123,6 +133,9 @@ PRODUCT_SHIPPING_API_LEVEL := 29
 
 # VNDK
 PRODUCT_TARGET_VNDK_VERSION := 29
+
+# Vendor properties
+-include $(LOCAL_PATH)/device_props.mk
 
 PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
