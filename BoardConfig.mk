@@ -6,7 +6,6 @@
 BUILD_BROKEN_DUP_RULES := true
 
 DEVICE_PATH := device/xiaomi/lmi
-PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 
@@ -18,7 +17,7 @@ TARGET_OTA_ASSERT_DEVICE := lmi
 
 # Architecture
 TARGET_ARCH := arm64
-TARGET_ARCH_VARIANT := armv8-a
+TARGET_ARCH_VARIANT := armv8-2a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := generic
@@ -54,6 +53,9 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+
+# HIDL
+DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/framework_manifest.xml
 
 # Init
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_lmi
@@ -122,9 +124,8 @@ TARGET_BOARD_PLATFORM := kona
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno650
 
 # Prop file include
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
+# TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 
 # QCOM
@@ -132,24 +133,31 @@ BOARD_USES_QCOM_HARDWARE := true
 
 # Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
-BOARD_USES_RECOVERY_AS_BOOT := false
-TARGET_NO_RECOVERY := false
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
-TARGET_USERIMAGES_USE_EXT4 := true
-TARGET_USERIMAGES_USE_F2FS := true
 TARGET_USES_MKE2FS := true
 
 # Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += \
-    $(DEVICE_PATH)/sepolicy/private
+    device/qcom/sepolicy/generic/private \
+    device/qcom/sepolicy/qva/private
+
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += \
+    device/qcom/sepolicy/generic/public \
+    device/qcom/sepolicy/qva/public
+
+# System as root
+BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Telephony
 TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
+TARGET_USES_ALTERNATIVE_MANUAL_NETWORK_SELECT := true
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
@@ -159,7 +167,7 @@ BOARD_AVB_VBMETA_SYSTEM := system
 BOARD_AVB_VBMETA_SYSTEM_KEY_PATH := external/avb/test/data/testkey_rsa2048.pem
 BOARD_AVB_VBMETA_SYSTEM_ALGORITHM := SHA256_RSA2048
 BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX := $(PLATFORM_SECURITY_PATCH_TIMESTAMP)
-BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 2
+BOARD_AVB_VBMETA_SYSTEM_ROLLBACK_INDEX_LOCATION := 1
 
 # Vendor
 BUILD_WITHOUT_VENDOR := true
@@ -168,5 +176,4 @@ BUILD_WITHOUT_VENDOR := true
 BOARD_VNDK_VERSION := current
 
 # Inherit from the proprietary version
-#-include vendor/xiaomi/lmi/BoardConfigVendor.mk
-
+-include vendor/xiaomi/lmi/BoardConfigVendor.mk

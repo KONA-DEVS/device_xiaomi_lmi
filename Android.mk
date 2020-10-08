@@ -1,57 +1,20 @@
+# Copyright (C) 2020 Paranoid Android
 #
-# Copyright (C) 2020 The LineageOS Project
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
 #
-# SPDX-License-Identifier: Apache-2.0
+#      http://www.apache.org/licenses/LICENSE-2.0
 #
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),lmi)
+ifneq ($(filter lmi,$(TARGET_DEVICE)),)
 include $(call all-makefiles-under,$(LOCAL_PATH))
-
 include $(CLEAR_VARS)
-
-# A/B builds require us to create the mount points at compile time.
-# Just creating it for all cases since it does not hurt.
-FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/firmware_mnt
-$(FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating $(FIRMWARE_MOUNT_POINT)"
-	@mkdir -p $(TARGET_OUT_VENDOR)/firmware_mnt
-
-BT_FIRMWARE_MOUNT_POINT := $(TARGET_OUT_VENDOR)/bt_firmware
-$(BT_FIRMWARE_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating $(BT_FIRMWARE_MOUNT_POINT)"
-	@mkdir -p $(TARGET_OUT_VENDOR)/bt_firmware
-
-DSP_MOUNT_POINT := $(TARGET_OUT_VENDOR)/dsp
-$(DSP_MOUNT_POINT): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating $(DSP_MOUNT_POINT)"
-	@mkdir -p $(TARGET_OUT_VENDOR)/dsp
-
-PERSIST_MOUNT_POINT := $(TARGET_ROOT_OUT)/persist
-$(PERSIST_MOUNT_POINT):
-	@echo "Creating $(PERSIST_MOUNT_POINT)"
-	@ln -sf /mnt/vendor/persist $(TARGET_ROOT_OUT)/persist
-	
-METADATA_MOUNT_POINT := $(TARGET_ROOT_OUT)/metadata
-$(METADATA_MOUNT_POINT):
-	@echo "Creating $(METADATA_MOUNT_POINT)"
-	@mkdir -p $(TARGET_ROOT_OUT)/metadata
-
-ALL_DEFAULT_INSTALLED_MODULES += $(FIRMWARE_MOUNT_POINT) $(BT_FIRMWARE_MOUNT_POINT) $(DSP_MOUNT_POINT) $(PERSIST_MOUNT_POINT) $(METADATA_MOUNT_POINT)
-
-RFS_MSM_ADSP_SYMLINKS := $(TARGET_OUT_VENDOR)/rfs/msm/adsp/
-$(RFS_MSM_ADSP_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "Creating RFS MSM ADSP folder structure: $@"
-	@rm -rf $@/*
-	@mkdir -p $(dir $@)/readonly/vendor
-	$(hide) ln -sf /data/vendor/tombstones/rfs/lpass $@/ramdumps
-	$(hide) ln -sf /mnt/vendor/persist/rfs/msm/adsp $@/readwrite
-	$(hide) ln -sf /mnt/vendor/persist/rfs/shared $@/shared
-	$(hide) ln -sf /mnt/vendor/persist/hlos_rfs/shared $@/hlos
-	$(hide) ln -sf /vendor/firmware_mnt $@/readonly/firmware
-	$(hide) ln -sf /vendor/firmware $@/readonly/vendor/firmware
-
-ALL_DEFAULT_INSTALLED_MODULES += $(RFS_MSM_ADSP_SYMLINKS)
-
 endif
