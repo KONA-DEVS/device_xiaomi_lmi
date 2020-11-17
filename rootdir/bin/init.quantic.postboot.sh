@@ -97,10 +97,9 @@ echo 90 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/hispeed_load
 echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/rtg_boost_freq
 echo 1000 > /sys/devices/system/cpu/cpufreq/policy7/schedutil/up_rate_limit_us
-echo 1075200 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
 
 # Scheduler tweaks
-echo 1 > /proc/sys/kernel/sched_conservative_pl
+echo 0 > /proc/sys/kernel/sched_conservative_pl
 echo 1 > /proc/sys/kernel/sched_user_hint
 
 # Mark top-app as boosted, find high-performing CPUs
