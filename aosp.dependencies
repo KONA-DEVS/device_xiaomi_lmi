@@ -1,0 +1,32 @@
+[
+  [
+  {
+    "repository": "android_device_xiaomi_sm8250-common",
+    "target_path": "device/xiaomi/sm8250-common"
+  },
+]
+    { 
+        "remote"       : "github",
+        "repository"   : "dataoutputstream/qcom_caf_sm8250_media",
+        "target_path"  : "hardware/qcom-caf/sm8250/media",
+        "branch"       : "LAUM9"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "dataoutputstream/qcom_caf_sm8250_audio",
+        "target_path"  : "hardware/qcom-caf/sm8250/audio",
+        "branch"       : "LAUM9"
+    },
+    { 
+        "remote"       : "github",
+        "repository"   : "dataoutputstream/qcom_caf_sm8250_display",
+        "target_path"  : "hardware/qcom-caf/sm8250/display",
+        "branch"       : "LAUM9"
+    },
+        { 
+        "remote"       : "github",
+        "repository"   : "LineageOS/android_hardware_xiaomi.git",
+        "target_path"  : "hardware/xiaomi",
+        "branch"       : "lineage-18.0"
+    }    
+]
