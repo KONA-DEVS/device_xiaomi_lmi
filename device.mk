@@ -54,7 +54,10 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    Snap
+    OpenCamera
+
+RODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/net.sourceforge.opencamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/net.sourceforge.opencamera.xml
 
 # Configstore
 PRODUCT_PACKAGES += \
