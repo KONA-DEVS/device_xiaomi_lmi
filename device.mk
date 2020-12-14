@@ -183,6 +183,11 @@ PRODUCT_BUILD_SUPER_PARTITION := false
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 BOARD_BUILD_PRODUCT_IMAGE := true
 
+# TetherOffload
+PRODUCT_PACKAGES += \
+    android.hardware.tetheroffload.config@1.0
+
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0
+
