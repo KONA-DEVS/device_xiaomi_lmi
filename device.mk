@@ -31,7 +31,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService \
+    AntHalService-Soong \
     antradio_app \
     libantradio
 
