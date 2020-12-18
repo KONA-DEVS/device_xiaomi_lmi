@@ -44,7 +44,11 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
-    BluetoothQti
+    BluetoothQti \
+    com.qualcomm.qti.bluetooth_audio@1.0 \
+    vendor.qti.hardware.bluetooth_audio@2.0 \
+    vendor.qti.hardware.btconfigstore@1.0 \
+    vendor.qti.hardware.btconfigstore@2.0
 
 # Camera
 PRODUCT_PACKAGES += \
