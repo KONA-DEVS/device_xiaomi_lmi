@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/derp_lmi.mk
+    $(LOCAL_DIR)/descendant_lmi.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_lmi-user \
-    derp_lmi-userdebug \
-    derp_lmi-eng
+    descendant_lmi-user \
+    descendant_lmi-userdebug \
+    descendant_lmi-eng
