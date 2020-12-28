@@ -59,13 +59,6 @@ TARGET_USES_QTI_CAMERA_DEVICE := true
 # Charger Mode
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
-# Dex
-ifeq ($(HOST_OS),linux)
-  ifneq ($(TARGET_BUILD_VARIANT),eng)
-    WITH_DEXPREOPT ?= true
-  endif
-endif
-
 # Display
 TARGET_USES_HWC2 := true
 TARGET_HAS_HDR_DISPLAY := true
