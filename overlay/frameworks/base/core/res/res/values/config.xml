@@ -368,6 +368,9 @@
     <!-- Whether device supports in-display fingerprint when screen is turned off -->
     <bool name="config_supportsInDisplayFingerprintGesture">true</bool>
     
+    <!-- Whether device supports in-display fingerprint -->
+    <bool name="config_supportsInDisplayFingerprint">true</bool>
+    
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
      <bool name="config_camera_sound_forced">false</bool>
     
