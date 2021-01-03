@@ -177,6 +177,10 @@ PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH) \
     vendor/nxp/opensource/sn100x
 
+# SystemUI and Gapps
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-gapps.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-gapps.xml
+
 # Telephony
 PRODUCT_PACKAGES += \
     ims-ext-common \
