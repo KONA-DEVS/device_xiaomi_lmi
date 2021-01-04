@@ -116,7 +116,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -186,6 +186,87 @@
              channels="2" />
     </EncoderProfile>
 
+    <!--khursheed.ali@imaging, 2020/03/19, HFR for Rear Main camera-->
+    <!-- VENDOR_EDIT add start -->
+    <EncoderProfile quality="highspeed720p" fileFormat="mp4" duration="30">
+       <Video codec="h264"
+              bitRate="12000000"
+              width="1280"
+              height="720"
+              frameRate="480" />
+
+       <Audio codec="aac"
+              bitRate="96000"
+              sampleRate="48000"
+              channels="2" />
+     </EncoderProfile>
+
+     <EncoderProfile quality="highspeedlow" fileFormat="mp4" duration="30">
+       <Video codec="h264"
+              bitRate="12000000"
+              width="1280"
+              height="720"
+              frameRate="480" />
+
+       <Audio codec="aac"
+              bitRate="96000"
+              sampleRate="48000"
+              channels="2" />
+     </EncoderProfile>
+
+     <EncoderProfile quality="highspeed1080p" fileFormat="mp4" duration="30">
+       <Video codec="h264"
+              bitRate="42000000"
+              width="1920"
+              height="1080"
+              frameRate="240" />
+
+       <Audio codec="aac"
+              bitRate="96000"
+              sampleRate="48000"
+              channels="2" />
+     </EncoderProfile>
+
+     <EncoderProfile quality="highspeedhigh" fileFormat="mp4" duration="30">
+       <Video codec="h264"
+              bitRate="42000000"
+              width="1920"
+              height="1080"
+              frameRate="240" />
+
+       <Audio codec="aac"
+              bitRate="96000"
+              sampleRate="48000"
+              channels="2" />
+     </EncoderProfile>
+     <!-- VENDOR_EDIT add end -->
+
+    <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="29400000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -194,7 +275,7 @@
             frameRate="24" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -207,7 +288,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -220,7 +301,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -274,7 +355,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -373,7 +454,35 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="29400000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -399,7 +508,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -412,7 +521,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -440,14 +549,24 @@
     </EncoderProfile>
 
     <EncoderProfile quality="high" fileFormat="mp4" duration="30">
+      <!--khursheed.ali@imaging, 2020/04/20, Remove UHD profile for front camera-->
+      <!--VENDOR_EDIT START-->
+      <!--
+      <Video codec="h264"
+             bitRate="50000000"
+             width="3840"
+             height="2160"
+             frameRate="30" />
+      -->
       <Video codec="h264"
              bitRate="20000000"
              width="1920"
              height="1080"
              frameRate="30" />
+      <!--VENDOR_EDIT END-->
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -512,13 +631,37 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
 
-<<<<<<< HEAD
-=======
+    <EncoderProfile quality="qhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="29400000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="4kdci" fileFormat="mp4" duration="30">
       <Video codec="h264"
             bitRate="57500000"
@@ -550,7 +693,19 @@
     -->
     <!--VENDOR_EDIT END-->
 
->>>>>>> 46fa73a... sm8250-common: Import media_codecs / media_profiles
+    <EncoderProfile quality="8kuhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="105000000"
+            width="7680"
+            height="4320"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
     <EncoderProfile quality="qcif" fileFormat="3gp" duration="30">
       <Video codec="h264"
              bitRate="192000"
@@ -594,14 +749,14 @@
 
     <EncoderProfile quality="timelapsehigh" fileFormat="mp4" duration="30">
       <Video codec="h264"
-             bitRate="20000000"
-             width="1920"
-             height="1080"
+             bitRate="50000000"
+             width="3840"
+             height="2160"
              frameRate="30" />
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -699,9 +854,76 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapseqhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="29400000"
+             width="2560"
+             height="1440"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse2k" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+             bitRate="20000000"
+             width="2048"
+             height="1080"
+             frameRate="30" />
+
+      <!-- audio setting is ignored -->
+      <Audio codec="aac"
+             bitRate="156000"
+             sampleRate="48000"
+             channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse4kdci" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="57500000"
+            width="4096"
+            height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse2160p" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="50000000"
+            width="3840"
+            height="2160"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
+    </EncoderProfile>
+
+    <EncoderProfile quality="timelapse8kuhd" fileFormat="mp4" duration="30">
+      <Video codec="h264"
+            bitRate="105000000"
+            width="7680"
+            height="4320"
+            frameRate="30" />
+
+      <Audio codec="aac"
+            bitRate="156000"
+            sampleRate="48000"
+            channels="2" />
     </EncoderProfile>
 
         <ImageEncoding quality="95" />
@@ -734,7 +956,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -799,7 +1021,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -812,7 +1034,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -825,7 +1047,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -838,7 +1060,7 @@
             frameRate="24" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -851,7 +1073,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -864,7 +1086,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -918,7 +1140,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1017,7 +1239,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1031,7 +1253,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1045,7 +1267,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1058,7 +1280,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1071,7 +1293,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1084,7 +1306,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1098,7 +1320,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="96000"
              sampleRate="48000"
              channels="1" />
     </EncoderProfile>
@@ -1112,7 +1334,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="96000"
              sampleRate="48000"
              channels="1" />
     </EncoderProfile>
@@ -1174,7 +1396,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1239,7 +1461,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1252,7 +1474,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1265,7 +1487,7 @@
              frameRate="30" />
 
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1278,7 +1500,7 @@
             frameRate="24" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1291,7 +1513,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1304,7 +1526,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1358,7 +1580,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1457,7 +1679,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1471,7 +1693,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1485,7 +1707,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="156000"
              sampleRate="48000"
              channels="2" />
     </EncoderProfile>
@@ -1498,7 +1720,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1511,7 +1733,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1524,7 +1746,7 @@
             frameRate="30" />
 
       <Audio codec="aac"
-            bitRate="320000"
+            bitRate="156000"
             sampleRate="48000"
             channels="2" />
     </EncoderProfile>
@@ -1538,7 +1760,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="96000"
              sampleRate="48000"
              channels="1" />
     </EncoderProfile>
@@ -1552,7 +1774,7 @@
 
       <!-- audio setting is ignored -->
       <Audio codec="aac"
-             bitRate="320000"
+             bitRate="96000"
              sampleRate="48000"
              channels="1" />
     </EncoderProfile>
