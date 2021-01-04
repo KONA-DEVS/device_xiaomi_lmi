@@ -1,0 +1,2 @@
+allow vendor_install_recovery self:capability { dac_read_search };
+allow vendor_install_recovery self:capability { dac_override };
