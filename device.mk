@@ -59,6 +59,11 @@ PRODUCT_PACKAGES += \
 RODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/net.sourceforge.opencamera.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/net.sourceforge.opencamera.xml
 
+# Cryptfs
+PRODUCT_PACKAGES += \
+    libcryptfs_hw \
+    vendor.qti.hardware.cryptfshw@1.0
+
 # Device-specific settings
 PRODUCT_PACKAGES += \
     XiaomiParts
