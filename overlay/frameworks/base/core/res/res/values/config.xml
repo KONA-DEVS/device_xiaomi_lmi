@@ -561,4 +561,7 @@
     <!-- Whether device supports double tap to wake -->
     <bool name="config_supportDoubleTapWake">true</bool>
 
+      <!-- Screen off FOD -->
+     <bool name="config_supportScreenOffFod">true</bool>
+
 </resources>
