@@ -75,12 +75,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-parts.xml
 
-# Descendant settings
-
-TARGET_FACE_UNLOCK_SUPPORT := YES
-PRODUCT_BOARD_PLATFORM := sm8250
-PRODUCT_USES_QCOM_HARDWARE := true
-
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
@@ -95,7 +89,7 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_COPY_FILES += \
-    vendor/descendant/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.fingerprint.xml
 PRODUCT_PACKAGES += \
     lineage.biometrics.fingerprint.inscreen@1.0-service.lmi
 
@@ -162,7 +156,7 @@ PRODUCT_PACKAGES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-descendant
+    $(LOCAL_PATH)/overlay-aosp
 
 # overlay-remove
 PRODUCT_PACKAGES += \

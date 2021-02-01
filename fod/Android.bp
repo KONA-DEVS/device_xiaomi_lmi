@@ -16,6 +16,7 @@
 cc_binary {
     relative_install_path: "hw",
     defaults: ["hidl_defaults"],
+    vintf_fragments: ["lineage.biometrics.fingerprint.inscreen@1.0-service.lmi.xml"],
     name: "lineage.biometrics.fingerprint.inscreen@1.0-service.lmi",
     init_rc: ["lineage.biometrics.fingerprint.inscreen@1.0-service.lmi.rc"],
     srcs: ["service.cpp", "FingerprintInscreen.cpp"],
