@@ -7,10 +7,10 @@
 $(call inherit-product, device/xiaomi/lmi/device.mk)
 
 # Inherit some common aicp stuff.
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/descendant/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := aosp_lmi
+PRODUCT_NAME := descendant_lmi
 PRODUCT_DEVICE := lmi
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := F2 Pro
